@@ -1,0 +1,110 @@
+{
+  "csp": {
+    "Basic Backtracking": {
+      "solved": true,
+      "nodes": 153,
+      "backtracks": 0,
+      "runtime_ms": 0.299,
+      "constraints_ok": true
+    },
+    "BT + MRV": {
+      "solved": true,
+      "nodes": 153,
+      "backtracks": 0,
+      "runtime_ms": 0.404,
+      "constraints_ok": true
+    },
+    "BT + MRV + FC": {
+      "solved": true,
+      "nodes": 17,
+      "backtracks": 0,
+      "runtime_ms": 4.565,
+      "constraints_ok": true
+    },
+    "BT + MRV + LCV + FC": {
+      "solved": true,
+      "nodes": 44,
+      "backtracks": 27,
+      "runtime_ms": 6.947,
+      "constraints_ok": true
+    }
+  },
+  "mdp": {
+    "vi_iterations": 195,
+    "vi_runtime_ms": 476.173,
+    "pi_iterations": 4,
+    "pi_runtime_ms": 364.326,
+    "policies_match": true,
+    "simulation": {
+      "MDP Optimal": {
+        "avg_discounted_reward": 98.53,
+        "avg_final_mastery_pct": 96.6,
+        "avg_burnout_slots": 0.0
+      },
+      "Fixed 2:1 Heuristic": {
+        "avg_discounted_reward": -53.71,
+        "avg_final_mastery_pct": 53.6,
+        "avg_burnout_slots": 6.2
+      },
+      "Always Deep Study (Без отдыха)": {
+        "avg_discounted_reward": -127.49,
+        "avg_final_mastery_pct": 61.8,
+        "avg_burnout_slots": 10.74
+      },
+      "Random Policy": {
+        "avg_discounted_reward": 27.52,
+        "avg_final_mastery_pct": 74.2,
+        "avg_burnout_slots": 1.25
+      }
+    }
+  },
+  "ml": {
+    "best_regressor": "Ridge Regression",
+    "regression_metrics": {
+      "Linear Regression": {
+        "MAE": 2.742,
+        "RMSE": 3.483,
+        "R2": 0.8869,
+        "CV_R2": 0.8763
+      },
+      "Ridge Regression": {
+        "MAE": 2.738,
+        "RMSE": 3.483,
+        "R2": 0.887,
+        "CV_R2": 0.8763
+      },
+      "Decision Tree": {
+        "MAE": 5.275,
+        "RMSE": 6.527,
+        "R2": 0.603,
+        "CV_R2": 0.5427
+      },
+      "Random Forest (GridSearch)": {
+        "MAE": 3.598,
+        "RMSE": 4.595,
+        "R2": 0.8033,
+        "CV_R2": 0.7892
+      }
+    },
+    "classification_metrics": {
+      "Logistic Regression": {
+        "Accuracy": 0.8688,
+        "Weighted_F1": 0.868
+      },
+      "Random Forest Classifier": {
+        "Accuracy": 0.8125,
+        "Weighted_F1": 0.7819
+      }
+    },
+    "feature_importances": {
+      "past_avg_grade": 0.2108,
+      "midterm_score": 0.4655,
+      "attendance_rate": 0.0493,
+      "assignments_completed": 0.0432,
+      "study_hours_planned": 0.1096,
+      "avg_sleep_hours": 0.0414,
+      "fatigue_index": 0.0191,
+      "subject_difficulty": 0.0612
+    }
+  }
+}
